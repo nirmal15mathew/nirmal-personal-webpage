@@ -2,10 +2,22 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js}"
+    "./src/**/*.js"
   ],
   theme: {
-    extend: {},
+    colors: {
+      'black': '#171219',
+      'gray': '#627C85',
+      'white': '#F0F7F4',
+      'red': '#D62246',
+      'red-light': '#FF5A5F'
+    },
+    fontFamily: {
+      sans: ["Kode Mono", "monospace"],
+    },
+    extend: {
+
+    },
   },
   plugins: [],
 }
