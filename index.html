@@ -1,31 +1,187 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="app">
-      <canvas id="bg" class="fixed top-0 left-0"></canvas>
-      <header class="w-full fixed top-0 left-0 flex">
-        <ul>
 
-        </ul>
-      </header>
-      <main class="w-screen h-screen bg-white p-16">
-        <div class="text-black font-semibold p-2">
-          <span>
-            Hi I am
-          </span>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nirmal Thomas Mathew</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.1/lib/p5.js"></script>
+  <meta name="description" content="Personal webpage of Nirmal Thomas Mathew">
+</head>
+
+<body>
+  <div id="app" class="bg-white">
+    <canvas id="bg" class="fixed top-0 left-0"></canvas>
+    <main class="w-screen h-screen p-16 grid grid-rows-layout z-50 absolute">
+      <div class="grid grid-cols-layout">
+        <!-- Main section top-->
+        <div class="text-black font-semibold p-2" id="homeSection">
           <h1 class="text-4xl my-2">
-            Nirmal
+            Nirmal Thomas Mathew
           </h1>
+          <span class="text-gray">
+            Developer / Tech Enthusiasist
+          </span>
         </div>
-      </main>
-    </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+        <!-- About section -->
+        <div class="text-black font-semibold p-2" id="abtSection" hidden="false">
+          <div class="flex flex-col">
+            <span class="text-gray">// Education </span>
+            <div class="flex flex-col p-2">
+              <span>Electronics and Communication Engineering</span>
+              <span>
+                National Institute of Technology, Calicut
+              </span>
+              <span>
+                2023-
+              </span>
+            </div>
+            <div class="w-10"></div>
+            <span class="text-gray">// Work Experience</span>
+            <div class="flex flex-col p-2">
+              <span>Freelance Fullstack Developer</span>
+              <span>
+                2018-
+              </span>
+            </div>
+          </div>
+        </div>
+        <div id="skill" class="text-black font-semibold p-2 text-lg" hidden>
+          <div class="flex flex-col gap-4">
+            <div>
+              <span class="text-xl text-gray">// Languages</span>
+              <div class="grid grid-cols-2 p-2">
+                <div id="labels">
+                  <ul class="flex flex-col gap-2">
+                    <li>
+                      JS
+                    </li>
+                    <li>
+                      Python
+                    </li>
+                    <li>
+                      C++
+                    </li>
+                    <li>
+                      C
+                    </li>
+                  </ul>
+                </div>
+                <div id="values">
+                  <ul class="flex flex-col gap-2">
+                    <li>
+                      /////////////////
+                    </li>
+                    <li>
+                      //////////////////////
+                    </li>
+                    <li>
+                      /////////////
+                    </li>
+                    <li>
+                      ////////
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span class="text-xl text-gray">// Libraries and Frameworks</span>
+              <div class="grid grid-cols-2 p-2">
+                <div id="labels">
+                  <ul class="flex flex-col gap-2">
+                    <li>
+                      ReactJs
+                    </li>
+                    <li>
+                      Sveltekit / Svelte
+                    </li>
+                    <li>
+                      Next
+                    </li>
+                    <li>
+                      Vue
+                    </li>
+                  </ul>
+                </div>
+                <div id="values">
+                  <ul class="flex flex-col gap-2">
+                    <li>
+                      /////////////////
+                    </li>
+                    <li>
+                      //////////////////////
+                    </li>
+                    <li>
+                      /////////////
+                    </li>
+                    <li>
+                      ////////
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="project" hidden></div>
+
+
+
+        <!-- Side menu -->
+        <div class="flex items-center text-black">
+          <ul class="flex flex-col gap-4 cursor-pointer">
+            <li class="hover:font-semibold transition-all hover:text-lg highlight" id="homeBtn">
+              <button onclick="launchHome()">
+                Home
+              </button>
+            </li>
+            <li class="hover:font-semibold transition-all hover:text-lg" id="abtBtn">
+              <button onclick="launchAbout()">
+                About
+              </button>
+            </li>
+            <li class="hover:font-semibold transition-all hover:text-lg" id="skillBtn">
+              <button onclick="launchSkills()">
+                Skills
+              </button>
+            </li>
+            <li class="hover:font-semibold transition-all hover:text-lg" id="projectsBtn">
+              <button onclick="launchProjects()">
+                Projects
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <!-- Footer -->
+      <footer class="flex items-end justify-center gap-8">
+        <a href="https://github.com/nirmal15mathew" target="_blank">
+          <span>
+            <img src="./assets/github_svg.svg" height="30px" width="30px">
+          </span>
+        </a>
+        <a href="https://instagram.com/nirmalthomasmathew" target="_blank">
+          <span>
+            <img src="./assets/inst_svg.svg" height="30px" width="30px">
+          </span>
+        </a>
+        <a href="malto:nirmal13mathew@gmail.com" target="_blank">
+          <span>
+            <img src="./assets/gmail_svg.svg" height="32px" width="32px">
+          </span>
+        </a>
+      </footer>
+    </main>
+  </div>
+  <script src="/main.js"></script>
+  <script src="./control.js"></script>
+</body>
+
 </html>

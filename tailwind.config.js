@@ -16,7 +16,12 @@ export default {
       sans: ["Kode Mono", "monospace"],
     },
     extend: {
-
+      gridTemplateRows: {
+        layout: '1fr 50px'
+      },
+      gridTemplateColumns: {
+        layout: '1fr 50px'
+      }
     },
   },
   plugins: [],
