@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.js"
-  ],
+  content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     colors: {
       'black': '#171219',
@@ -21,9 +18,10 @@ export default {
       },
       gridTemplateColumns: {
         layout: '1fr 50px'
-      }
+      },
+      extend: {},
     },
-  },
-  plugins: [],
-}
+    plugins: [],
+  }
 
+}
