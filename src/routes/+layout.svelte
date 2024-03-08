@@ -8,7 +8,7 @@ import "../app.css"
 
 <div class="bg-white">
     <BackgroundCanvas />
-    <main class="w-screen h-screen p-16 grid grid-rows-layout z-50 absolute">
+    <main class="w-screen h-screen p-16 grid grid-rows-layout relative z-50">
         <div class="grid grid-cols-layout">
             <slot></slot>
             <Sidebar />
