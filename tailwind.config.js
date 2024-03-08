@@ -2,13 +2,7 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    colors: {
-      'black': '#171219',
-      'gray': '#627C85',
-      'white': '#F0F7F4',
-      'red': '#D62246',
-      'red-light': '#FF5A5F'
-    },
+    
     fontFamily: {
       sans: ["Kode Mono", "monospace"],
     },
@@ -19,7 +13,13 @@ export default {
       gridTemplateColumns: {
         layout: '1fr 50px'
       },
-      extend: {},
+      colors: {
+        'black': '#171219',
+        'gray': '#627C85',
+        'white': '#F0F7F4',
+        'red': '#D62246',
+        'red-light': '#FF5A5F'
+      },
     },
     plugins: [],
   }

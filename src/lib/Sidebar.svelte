@@ -1,4 +1,4 @@
-<div class="flex items-center text-black">
+<div class="flex items-center text-black text-lg">
     <ul class="flex flex-col gap-4 cursor-pointer">
         <li
             class="hover:font-semibold transition-all hover:text-lg highlight"
