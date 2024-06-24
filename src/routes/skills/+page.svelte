@@ -22,6 +22,7 @@
               <li>
                 C
               </li>
+<li>Rust</li>
             </ul>
           </div>
           <div id="values">
@@ -38,6 +39,7 @@
               <li>
                 ////////
               </li>
+<li>////////</li>
             </ul>
           </div>
         </div>
