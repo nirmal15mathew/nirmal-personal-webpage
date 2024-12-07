@@ -6,6 +6,15 @@
 
 <div>
     <div>
-        Project 1
+        Timeline 
     </div>
+  <div>
+    Build Logs
+  </div>
+    <div>
+    IoT App
+  </div>
+  <div>
+    Algorithm Visualizer
+  </div>
 </div>

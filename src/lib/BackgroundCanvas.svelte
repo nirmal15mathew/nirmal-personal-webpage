@@ -6,6 +6,10 @@
     let canvas;
     /** @type {CanvasRenderingContext2D | null}*/
     let ctx;
+
+    /** @type {Number[]} */
+    let offsetWave = []
+    const gap = 30;
     onMount(() => {
         ctx = canvas.getContext("2d");
         canvas.height = window.innerHeight;
@@ -47,13 +51,25 @@
      *
      * @param ctx {CanvasRenderingContext2D}
      */
+
+     function update(delta) {
+        
+        for (let i = 0; i < window.innerWidth; i += gap) {
+            offsetWave[i] = Math.sin(i / 40 + delta / 10)*5;
+        }
+     }
+
+    let delta = 0;
     function draw() {
-        let gap = 30;
         ctx.fillStyle = "#627C85";
+        delta = delta + 0.1
+        ctx?.clearRect(0, 0, window.innerWidth, window.innerHeight)
+        drawLogo(ctx)
         for (let i = 0; i < window.innerWidth; i += gap) {
             for (let j = 0; j < window.innerHeight; j += gap) {
-                drawPoint(ctx, i, j);
+                drawPoint(ctx, i + offsetWave[i], j + offsetWave[i]);
             }
+            update(delta)
         }
         requestAnimationFrame(draw);
     }
